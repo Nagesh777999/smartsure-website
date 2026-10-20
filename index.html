@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#04120f">
+  <meta name="description" content="SmartSure — football tips, match insights and results. Explore SmartSure on your devices.">
+  <title>SmartSure — Football Tips & Insights</title>
+  <style>
+    :root{--bg:#04100f;--panel:#071b19;--panel2:#092521;--green:#00d879;--green2:#00a85d;--text:#f4fbf8;--muted:#a8c1b9;--line:#164239}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(ellipse at 75% 18%,#063b2c 0,transparent 35%),var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none} .wrap{width:min(1160px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:5;background:#04100fee;backdrop-filter:blur(14px);border-bottom:1px solid #14352f}
+    nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-size:25px;font-weight:800;letter-spacing:-.7px}.logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#00f08b,#008c4f);display:grid;place-items:center;color:#fff;font-weight:900;font-size:25px;box-shadow:0 0 25px #00d87933}.brand span span{color:var(--green)}
+    .navlinks{display:flex;gap:28px;color:#d2e6df;font-weight:600}.navlinks a:hover{color:var(--green)} .menu{display:none;background:none;color:white;border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;padding:68px 0 72px;min-height:540px}
+    .eyebrow{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(42px,5vw,66px);line-height:1.04;letter-spacing:-2.5px;margin:15px 0}.hero h1 em{font-style:normal;color:var(--green)}.hero p{color:var(--muted);font-size:18px;max-width:560px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 22px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;padding:14px 19px;border-radius:12px;border:1px solid var(--line);font-weight:800;cursor:pointer;transition:.2s}.btn.primary{background:linear-gradient(135deg,var(--green),var(--green2));color:#001b10;border:0}.btn.secondary{background:#091b19}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.fine{font-size:12px;color:#829e95}
+    .device-scene{position:relative;min-height:390px;display:grid;place-items:center}.glow{position:absolute;width:330px;height:330px;border-radius:50%;background:#00d87922;filter:blur(30px)}.screen{position:relative;background:linear-gradient(160deg,#0c2924,#061311);border:1px solid #286456;box-shadow:0 24px 70px #0009;border-radius:25px;padding:18px;width:min(100%,390px);transform:rotate(2deg)}.screenhead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1b443a;padding-bottom:14px}.mini-brand{font-weight:800}.mini-brand b{color:var(--green)}.pill{font-size:11px;color:var(--green);border:1px solid #167d54;border-radius:99px;padding:4px 8px}.scorecard{background:#0a211d;border:1px solid #164239;border-radius:13px;margin-top:12px;padding:13px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.league{font-size:11px;color:#87a99d}.teams{font-weight:700;margin-top:6px}.score{color:var(--green);font-weight:900}.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}.stat{background:#0b2922;border:1px solid #164239;border-radius:10px;padding:12px 8px;text-align:center}.stat strong{display:block;color:var(--green);font-size:18px}.stat small{color:#9cb9ae;font-size:10px}
+    section{padding:54px 0}.sectionhead{text-align:center;max-width:690px;margin:0 auto 30px}.sectionhead h2{font-size:clamp(28px,4vw,42px);line-height:1.1;margin:8px 0 12px;letter-spacing:-1px}.sectionhead h2 span{color:var(--green)}.sectionhead p{color:var(--muted);margin:0}
+    .features,.platforms{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature,.platform{background:linear-gradient(160deg,#09201c,#061512);border:1px solid var(--line);border-radius:16px;padding:22px}.feature .ico{font-size:26px}.feature h3,.platform h3{margin:10px 0 5px}.feature p,.platform p{color:var(--muted);font-size:14px;margin:0}.platforms{grid-template-columns:repeat(4,1fr)}.platform{display:flex;flex-direction:column;align-items:flex-start}.platform .btn{margin-top:18px;width:100%;font-size:13px;padding:11px 9px}.platform .tag{color:var(--green);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+    .cta{border:1px solid #17654c;border-radius:20px;background:radial-gradient(ellipse at 80% 0,#075b3c66,transparent 55%),#071b17;padding:36px;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{font-size:clamp(25px,3vw,36px);margin:6px 0}.cta p{color:var(--muted);margin:0}
+    footer{border-top:1px solid #14352f;padding:26px 0;color:#9cb7ae;font-size:13px}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footlinks{display:flex;gap:18px;flex-wrap:wrap}.footlinks a:hover{color:var(--green)}
+    .notice{margin-top:12px;color:#8eaaa1;font-size:12px}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:48px 0}.device-scene{min-height:330px}.features{grid-template-columns:1fr}.platforms{grid-template-columns:repeat(2,1fr)}.navlinks{display:none;position:absolute;top:70px;left:0;right:0;background:#04100f;padding:20px 4%;border-bottom:1px solid var(--line);flex-direction:column;gap:16px}.navlinks.open{display:flex}.menu{display:block}.cta{align-items:flex-start;flex-direction:column}}
+    @media(max-width:460px){.platforms{grid-template-columns:1fr}.hero h1{letter-spacing:-1.5px}.actions .btn{width:100%}.screen{padding:13px}.device-scene{min-height:300px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="brand" href="#" aria-label="SmartSure home"><span class="logo">S</span><span>Smart<span>Sure</span></span></a>
+  <div class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#features">Features</a><a href="#download">Download</a><a href="#support">Support</a></div>
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+</nav></div></header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">Football insights. Wherever you are.</div>
+      <h1>Meet <em>SmartSure</em>.<br>Make smarter match decisions.</h1>
+      <p>Explore football tips, match information and results in one clean experience. Get SmartSure on your Android device or use the web version when available.</p>
+      <div class="actions">
+        <a class="btn primary" href="#download">↓ &nbsp; Download SmartSure</a>
+        <a class="btn secondary" href="#features">Explore features&nbsp; →</a>
+      </div>
+      <div class="fine">Android APK availability depends on a successful signed build. Store links will appear when published.</div>
+    </div>
+    <div class="device-scene" aria-label="SmartSure app preview illustration">
+      <div class="glow"></div><div class="screen">
+        <div class="screenhead"><div class="mini-brand">🟢 Smart<b>Sure</b></div><span class="pill">MATCH INSIGHTS</span></div>
+        <div class="scorecard"><div class="row"><span class="league">PREMIER LEAGUE · DEMO</span><span class="pill">LIVE UI PREVIEW</span></div><div class="row teams"><span>🔵 Man City</span><span class="score">1 — 0</span><span>Arsenal 🔴</span></div><div class="league" style="margin-top:8px">Match preview • Team form • Results</div></div>
+        <div class="scorecard"><div class="row"><strong>Featured insights</strong><span class="pill">DEMO</span></div><div class="row teams"><span>⚽ Over 1.5 goals</span><span class="score">Review</span></div><div class="row teams"><span>⚽ Both teams to score</span><span class="score">Review</span></div></div>
+        <div class="statgrid"><div class="stat"><strong>🌍</strong><small>LEAGUES</small></div><div class="stat"><strong>📊</strong><small>INSIGHTS</small></div><div class="stat"><strong>★</strong><small>PREMIUM</small></div></div>
+      </div>
+    </div>
+  </div>
+  <section id="features"><div class="wrap">
+    <div class="sectionhead"><div class="eyebrow">Built for football fans</div><h2>Everything in one <span>place</span></h2><p>A responsive home for SmartSure information and downloads. Actual app features depend on the version you publish.</p></div>
+    <div class="features">
+      <article class="feature"><div class="ico">⚽</div><h3>Football coverage</h3><p>Organize leagues, match previews and results in a simple layout.</p></article>
+      <article class="feature"><div class="ico">📊</div><h3>Clear match insights</h3><p>Present your app's analysis and information with readable, mobile-friendly screens.</p></article>
+      <article class="feature"><div class="ico">🔐</div><h3>Account & premium</h3><p>Link users to the real app experience and published support/legal pages.</p></article>
+    </div>
+  </div></section>
+  <section id="download"><div class="wrap">
+    <div class="sectionhead"><div class="eyebrow">One brand, many screens</div><h2>Download on <span>your device</span></h2><p>Choose your platform. Unavailable downloads are clearly marked until the official app build or store listing is ready.</p></div>
+    <div class="platforms">
+      <article class="platform"><div class="tag">Android</div><h3>Android phone & tablet</h3><p>Install the APK directly once your release build is ready, or use Google Play after publishing.</p><a class="btn primary" href="#" data-placeholder="apk">APK coming soon</a><a class="btn" href="#" data-placeholder="play">Google Play — coming soon</a></article>
+      <article class="platform"><div class="tag">Apple</div><h3>iPhone & iPad</h3><p>Use the App Store listing after the iOS version has been built and approved.</p><a class="btn" href="#" data-placeholder="ios">App Store — coming soon</a></article>
+      <article class="platform"><div class="tag">Desktop</div><h3>Windows PC</h3><p>Open the responsive web app in your browser when that version is deployed.</p><a class="btn" href="#" data-placeholder="web">Web version — coming soon</a></article>
+      <article class="platform"><div class="tag">Desktop</div><h3>Mac & other devices</h3><p>Use a supported browser. A browser version must be deployed separately from this landing page.</p><a class="btn" href="#" data-placeholder="web">Open in browser — coming soon</a></article>
+    </div>
+    <p class="notice">Safety note: only install APK files from your official SmartSure download page. Do not upload signing keys, passwords, API secrets or your .env file to a public repository.</p>
+  </div></section>
+  <section id="support"><div class="wrap"><div class="cta"><div><div class="eyebrow">Need help?</div><h2>SmartSure, across your devices.</h2><p>Check the official terms and privacy information before using the app.</p></div><div class="actions" style="margin:0"><a class="btn secondary" href="https://nagesh777999.github.io/smartsure-legal/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a><a class="btn secondary" href="https://nagesh777999.github.io/smartsure-legal/terms.html" target="_blank" rel="noopener">Terms & Conditions</a></div></div></div></section>
+</main>
+<footer><div class="wrap foot"><a class="brand" href="#"><span class="logo">S</span><span>Smart<span>Sure</span></span></a><span>© <span id="year"></span> SmartSure. All rights reserved.</span><div class="footlinks"><a href="#home">Home</a><a href="#download">Download</a><a href="https://nagesh777999.github.io/smartsure-legal/privacy-policy.html">Privacy</a><a href="https://nagesh777999.github.io/smartsure-legal/terms.html">Terms</a></div></div></footer>
+<script>
+  const menu = document.getElementById('menu');
+  menu.addEventListener('click', () => document.getElementById('navlinks').classList.toggle('open'));
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.querySelectorAll('[data-placeholder]').forEach(link => link.addEventListener('click', event => {
+    event.preventDefault();
+    const kind = link.dataset.placeholder;
+    const messages = {apk:'The Android APK link is not configured yet. Build your APK first, then replace this button with the real download URL.',play:'Add your Google Play Store listing URL after the app is published.',ios:'Add your App Store listing after the iOS app is built and approved.',web:'Add the URL of your deployed SmartSure web app here.'};
+    alert(messages[kind] || 'This link is not configured yet.');
+  }));
+</script>
+</body>
+</html>
